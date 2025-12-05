@@ -25,10 +25,10 @@ async function sendMessage() {
     
     try {
         // --- Call your backend API ---
-        const response = await fetch("http://localhost:8000/chat", {
+        const response = await fetch("https://metalchat-ai.ddns.net/chat", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ message: text })
+            body: JSON.stringify({ question: text })
         });
 
         const data = await response.json();
